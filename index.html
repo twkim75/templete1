@@ -5,217 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>템플릿</title>
-    <meta name="description" content="Introducing developer Taewook" />
-    <meta name="author" content="TaeWook" />
-    <!-- 로고 -->
-    <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <!-- 아이콘 - fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/6987b13b6f.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- 폰트 - google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- 폰트 -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Source+Serif+Pro:wght@200&display=swap"
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
     <!-- css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <!-- js html파일을 다 파싱된후 js를 파싱한다.-->
     <script type="text/javascript" src="main.js" defer></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <i class="fab fa-diaspora"></i>
-        <a href="#">술집이름</a>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item active" data-link="#home">Home</li>
-        <li class="navbar__menu__item" data-link="#about">About</li>
-        <li class="navbar__menu__item" data-link="#skils">Skils</li>
-        <li class="navbar__menu__item" data-link="#work">Work</li>
-        <li class="navbar__menu__item" data-link="#testimonials">
-          Testimonials
-        </li>
-        <li class="navbar__menu__item" data-link="#contact">Contact</li>
-      </ul>
-      <button class="navbar__toggle-btn">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </nav>
-    <!-- HOME -->
-    <section id="home">
-      <div class="home__container">
-        <h1 class="home__title">술집입니다.</h1>
-        <h2 class="home__discription">welcome</h2>
-      </div>
-    </section>
-    <!-- About -->
-    <section id="about" class="section section__container">
-      <h1>동영상 섹션</h1>
+    <div class="wrapper">
+      <header id="nav">
+        <div class="navbar">
+          <div class="navbar__logo">
+            <a href="#">
+              <img src="/imgs/logo.jpg" width="140" height="54" alt="" />
+            </a>
+          </div>
+          <ul class="navbar__menu">
+            <li
+              class="navbar__menu__item"
+              data-link="#main"
+              onclick="moveSection(event)"
+            >
+              브랜드
+            </li>
+            <li
+              class="navbar__menu__item"
+              data-link="#section2"
+              onclick="moveSection(event)"
+            >
+              메뉴
+            </li>
+            <li
+              class="navbar__menu__item"
+              data-link="#section3"
+              onclick="moveSection(event)"
+            >
+              인테리어
+            </li>
+            <li
+              class="navbar__menu__item"
+              data-link="#section3"
+              onclick="moveSection(event)"
+            >
+              매장안내
+            </li>
+            <li
+              class="navbar__menu__item"
+              data-link="#section4"
+              onclick="moveSection(event)"
+            >
+              창업안내
+            </li>
+          </ul>
+        </div>
+      </header>
+      <section id="main">
+        <div class="home_bg bg_1"></div>
+        <div class="home_bg bg_2"></div>
+        <div class="home_bg bg_3"></div>
 
-      <!-- <div class="about__jobs">
-        <div class="job">
-          <img class="job__logo" src="/imgs/jobs/job_logo_1.png" alt="logo" />
-          <div class="job__discription">
-            <p class="job__name">주임연구원</p>
-            <p class="job__period">2020.08 ~ 2023.03</p>
+        <div class="bg_change_bar">
+          <div class="changer active" data-index="0"></div>
+          <div class="changer" data-index="1"></div>
+          <div class="changer" data-index="2"></div>
+        </div>
+      </section>
+      <section id="section2">
+        <img src="/imgs/home/section2.png" alt="" />
+      </section>
+      <section id="section3">
+        <div class="container">
+          <img src="/imgs/home/section3.png" alt="" />
+        </div>
+      </section>
+      <section id="section4">
+        <div class="container">
+          <div class="footer__left">
+            <h2 style="margin-bottom: 24px">
+              창업문의 <strong style="color: #ffd966">1234 - 5678</strong>
+            </h2>
+            <p class="info">
+              <span>도시맥주</span>
+              <span>대표이사:홍길동</span>
+              <span>이메일:info@naver.com</span>
+              <span>대표전화:1234-1234</span>
+              <span>팩스:032-123-4567</span>
+            </p>
+            <p class="info">
+              <span>
+                주소:인천시 연수구 인천타워대로 323 (송도 센트로드 Office A동
+                2707-9호)
+              </span>
+              <span>운영시간:15:30~24:00</span>
+            </p>
+            <p class="copyright">© 2023. 도시맥주. All rights reserved.</p>
           </div>
         </div>
-        <div class="job">
-          <img class="job__logo" src="/imgs/jobs/job_logo_2.png" alt="logo" />
-          <div class="job__discription">
-            <p class="job__name">대리</p>
-            <p class="job__period">2020.03 ~ 현재</p>
-          </div>
-        </div>
-      </div> -->
-    </section>
-    <!-- skils -->
-    <section id="skils" class="section">
-      <div class="section__container">
-        <h1>기업소개 섹션</h1>
-      </div>
-    </section>
-    <!-- work -->
-    <section id="work" class="section">
-      <div class="section__container">
-        <h1>메뉴 섹션</h1>
-        <h3>메뉴</h3>
-        <div class="work__categories">
-          <button class="category__btn active">
-            전체
-            <span class="category__count">8</span>
-          </button>
-          <button class="category__btn">
-            음식
-            <span class="category__count">3</span>
-          </button>
-          <button class="category__btn">
-            주류
-            <span class="category__count">2</span>
-          </button>
-          <button class="category__btn">
-            기타
-            <span class="category__count">3</span>
-          </button>
-        </div>
-        <div class="work__projects">
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>노가리</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>닭도리탕</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>오뎅탕</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>소주</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>맥주</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>물</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>젓가락</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank">
-            <img class="project__img" alt="" />
-            <div class="project__description">
-              <h3>물티슈</h3>
-              <span>설명내용</span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- Image resizer: https://resizeimage.net/ Image compressor: https://tinypng.com/ -->
-    </section>
-    <!-- testimonials -->
-    <section id="testimonials" class="section">
-      <div class="section__container">
-        <h1>매장안내</h1>
-        <h3>매장안내입니다</h3>
-        <!-- <div class="testimonials">
-          <div class="testimonial">
-            <img
-              class="testimonial__avatar"
-              src="/imgs/testimonial/people1.jpg"
-              alt="People"
-            />
-            <div class="testimonial__speech-bubble">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </p>
-              <p class="name"><a href="">taewook</a> / Samsung</p>
-            </div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial__speech-bubble">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </p>
-              <p class="name"><a href="">taewook</a> / Samsung</p>
-            </div>
-            <img
-              class="testimonial__avatar"
-              src="/imgs/testimonial/people1.jpg"
-              alt="People"
-            />
-          </div>
-        </div> -->
-      </div>
-    </section>
-    <!-- contact -->
-    <section id="contact" class="section">
-      <h1 class="contact__title">가맹상담신청</h1>
-      <h2 class="contact__email">010.1234.5678</h2>
-      <div class="contact_links"></div>
-      <div class="contact_rights">2023 izakaya - All right reserved</div>
-    </section>
-    <!-- Arrow up -->
-    <button class="arrow-up">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+      </section>
+    </div>
   </body>
 </html>
